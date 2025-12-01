@@ -1,48 +1,85 @@
 import React from "react";
 import Image from "next/image";
 import { Urbanist, Inter } from "next/font/google";
+import SolidButton from "./SolidButton"; // added
 
-const urbanist = Urbanist({ subsets: ["latin"], weight: ["700"] });
+const urbanist = Urbanist({ subsets: ["latin"], weight: ["600"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 
 export default function Card1() {
   return (
-    <div className="w-full px-6 lg:px-12 xl:px-16 py-8">
+    <div className="relative w-full flex justify-center py-12">
       <div
-        className="flex flex-col lg:flex-row w-full border-2 overflow-hidden rounded-lg shadow-lg"
+        className="relative flex overflow-hidden"
         style={{
-          backgroundColor: "#0E271B",
-          borderColor: "#2F855A",
+          // scaled down from 1852x1180 -> 1100x700 (keeps same ratio)
+          width: "1100px",
+          height: "700px",
+          background: "#123524",
+          border: "1px solid #2F855A",
+          borderRadius: "10px",
         }}
       >
-        {/* Left half - Text content */}
-        <div
-          className="flex flex-col justify-center p-8 lg:p-12 xl:p-16"
-          style={{
-            flex: "1 1 45%",
-          }}
-        >
-          <h2
-            className={`${urbanist.className} text-white text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6`}
+        {/* Left Content Area (scaled) */}
+        <div className="relative" style={{ width: "550px", height: "700px" }}>
+          {/* Header */}
+          <h1
+            className={`${urbanist.className} absolute text-white`}
+            style={{
+              width: "429px", // scaled from 722
+              height: "427px", // scaled from 720
+              left: "34px", // scaled from 58
+              top: "37px", // scaled from 62
+              fontSize: "60px", // scaled from 100
+              lineHeight: "71px", // scaled from 120
+              fontWeight: 600,
+            }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod
-          </h2>
+          </h1>
+
+          {/* Subheader */}
           <p
-            className={`${inter.className} text-white/80 text-xs lg:text-sm leading-relaxed mb-8`}
+            className={`${inter.className} absolute text-white`}
+            style={{
+              width: "460px", // scaled from 774
+              height: "150px", // scaled from 252
+              left: "34px", // scaled from 58
+              top: "409px", // scaled from 688
+              fontSize: "21px", // scaled from 35
+              lineHeight: "25px", // scaled from 42
+              fontWeight: 400,
+            }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
+
+          {/* PlaceHolder button inserted where the buttons were */}
+          <div
+            style={{
+              position: "absolute",
+              left: "34px",
+              top: "600px", // positioned below the subheader
+              zIndex: 30, // ensure visible above other layers
+            }}
+          >
+            <SolidButton>PlaceHolder</SolidButton>
+          </div>
         </div>
 
-        {/* Right half - Image */}
+        {/* Right Image Area (scaled) */}
         <div
-          className="relative min-h-[300px] lg:min-h-[450px]"
+          className="relative"
           style={{
-            flex: "1 1 55%",
+            width: "550px",
+            height: "700px",
+            border: "1px solid #2F855A",
+            borderRadius: "0px 10px 10px 0px",
+            overflow: "hidden",
           }}
         >
           <Image

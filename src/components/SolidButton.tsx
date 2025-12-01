@@ -18,6 +18,7 @@ export default function SolidButton({
       onClick={onClick}
       aria-label={typeof children === "string" ? children : undefined}
       className={`
+        relative z-20 shadow-md
         px-6 py-2 
         text-white 
         font-medium 
@@ -31,10 +32,12 @@ export default function SolidButton({
         ${className}
       `}
       style={{
-        backgroundColor: "#2F855A",
+        backgroundColor: "#38A169", // brighter green for contrast
+        boxShadow: "0 6px 18px rgba(15, 23, 42, 0.35)",
+        border: "1px solid rgba(255,255,255,0.03)",
       }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#287d4f")}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#2F855A")}
+      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#2F855A")}
+      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#38A169")}
     >
       {children}
     </button>
