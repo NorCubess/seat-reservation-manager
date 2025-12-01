@@ -1,15 +1,21 @@
+"use client";
 import React from "react";
 import { Leckerli_One } from "next/font/google";
 import WordButton from "./WordButton";
 import SolidButton from "./SolidButton";
+import useScrollDirection from "../hooks/useScrollDirection";
 
 const leckerli = Leckerli_One({ subsets: ["latin"], weight: "400" });
 
 export default function NavBar() {
+  const scrollDirection = useScrollDirection();
+
   return (
     <nav
-      style={{ backgroundColor: "#0E271B" }}
-      className="relative w-full flex items-center justify-between"
+      style={{ backgroundColor: "rgba(14,39,27,0.68)" }} // changed to 80% opacity
+      className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between z-50 transition-transform duration-300 backdrop-blur-sm ${
+        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+      }`}
     >
       {/* left logo area */}
       <div
