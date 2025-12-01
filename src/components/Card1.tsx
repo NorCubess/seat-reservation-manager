@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Urbanist, Inter } from "next/font/google";
 import SolidButton from "./SolidButton"; // added
+import TranspButton from "./TranspButton"; // added
 
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["600"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400"] });
@@ -58,16 +59,20 @@ export default function Card1() {
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          {/* PlaceHolder button inserted where the buttons were */}
+          {/* Buttons: Solid + Transparent side-by-side */}
           <div
             style={{
               position: "absolute",
               left: "34px",
-              top: "600px", // positioned below the subheader
-              zIndex: 30, // ensure visible above other layers
+              top: "600px", // positioned below the subheader (keeps previous placement)
+              zIndex: 30,
+              display: "flex",
+              gap: "16px",
+              alignItems: "center",
             }}
           >
             <SolidButton>PlaceHolder</SolidButton>
+            <TranspButton>More Info</TranspButton>
           </div>
         </div>
 
