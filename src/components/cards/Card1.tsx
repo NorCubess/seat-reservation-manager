@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Urbanist, Inter } from "next/font/google";
-import SolidButton from "./SolidButton"; // added
-import TranspButton from "./TranspButton"; // added
+import SolidButton from "../buttons/SolidButton";
+import TranspButton from "../buttons/TranspButton";
 
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["600"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400"] });
@@ -13,7 +13,6 @@ export default function Card1() {
       <div
         className="relative flex overflow-hidden"
         style={{
-          // scaled down from 1852x1180 -> 1100x700 (keeps same ratio)
           width: "1100px",
           height: "700px",
           background: "#123524",
@@ -27,12 +26,12 @@ export default function Card1() {
           <h1
             className={`${urbanist.className} absolute text-white`}
             style={{
-              width: "429px", // scaled from 722
-              height: "427px", // scaled from 720
-              left: "34px", // scaled from 58
-              top: "37px", // scaled from 62
-              fontSize: "60px", // scaled from 100
-              lineHeight: "71px", // scaled from 120
+              width: "429px",
+              height: "427px",
+              left: "34px",
+              top: "37px",
+              fontSize: "60px",
+              lineHeight: "71px",
               fontWeight: 600,
             }}
           >
@@ -44,12 +43,12 @@ export default function Card1() {
           <p
             className={`${inter.className} absolute text-white`}
             style={{
-              width: "460px", // scaled from 774
-              height: "150px", // scaled from 252
-              left: "34px", // scaled from 58
-              top: "409px", // scaled from 688
-              fontSize: "21px", // scaled from 35
-              lineHeight: "25px", // scaled from 42
+              width: "460px",
+              height: "150px",
+              left: "34px",
+              top: "409px",
+              fontSize: "21px",
+              lineHeight: "25px",
               fontWeight: 400,
             }}
           >
@@ -64,7 +63,7 @@ export default function Card1() {
             style={{
               position: "absolute",
               left: "34px",
-              top: "600px", // positioned below the subheader (keeps previous placement)
+              top: "600px",
               zIndex: 30,
               display: "flex",
               gap: "16px",

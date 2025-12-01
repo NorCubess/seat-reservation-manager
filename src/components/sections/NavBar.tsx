@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { Leckerli_One } from "next/font/google";
-import WordButton from "./WordButton";
-import SolidButton from "./SolidButton";
-import useScrollDirection from "../hooks/useScrollDirection";
+import WordButton from "../buttons/WordButton";
+import SolidButton from "../buttons/SolidButton";
+import useScrollDirection from "../../hooks/useScrollDirection";
 
 const leckerli = Leckerli_One({ subsets: ["latin"], weight: "400" });
 
