@@ -1,18 +1,17 @@
 "use client";
-
 import React from "react";
 
-interface SolidButtonProps {
+interface TranspButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
 }
 
-export default function SolidButton({
+export default function TranspButton({
   children,
   onClick,
   className = "",
-}: SolidButtonProps) {
+}: TranspButtonProps) {
   return (
     <button
       onClick={onClick}
@@ -32,12 +31,12 @@ export default function SolidButton({
         ${className}
       `}
       style={{
-        backgroundColor: "#38A169", // brighter green for contrast
+        backgroundColor: "transparent",
         boxShadow: "0 6px 18px rgba(15, 23, 42, 0.35)",
-        border: "1px solid rgba(255,255,255,0.03)",
+        border: "1px solid #2F855A",
       }}
       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#2F855A")}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#38A169")}
+      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
     >
       {children}
     </button>
