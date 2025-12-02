@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Urbanist, Inter } from "next/font/google";
-import SolidButton from "./SolidButton"; // added
-import TranspButton from "./TranspButton"; // added
+import SolidButton from "../buttons/SolidButton";
+import TranspButton from "../buttons/TranspButton";
 
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["600"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400"] });
@@ -13,26 +13,26 @@ export default function Card1() {
       <div
         className="relative flex overflow-hidden"
         style={{
-          // scaled down from 1852x1180 -> 1100x700 (keeps same ratio)
-          width: "1100px",
-          height: "700px",
+          // scaled to match visual scale of Section2 while keeping aspect ratio
+          width: "1078px", // was 1100 previously (kept close to prior scale)
+          height: "687px", // new height keeping original aspect ratio
           background: "#123524",
           border: "1px solid #2F855A",
           borderRadius: "10px",
         }}
       >
         {/* Left Content Area (scaled) */}
-        <div className="relative" style={{ width: "550px", height: "700px" }}>
+        <div className="relative" style={{ width: "539px", height: "687px" }}>
           {/* Header */}
           <h1
             className={`${urbanist.className} absolute text-white`}
             style={{
-              width: "429px", // scaled from 722
-              height: "427px", // scaled from 720
-              left: "34px", // scaled from 58
-              top: "37px", // scaled from 62
-              fontSize: "60px", // scaled from 100
-              lineHeight: "71px", // scaled from 120
+              width: "421px", // scaled from previous values
+              height: "415px",
+              left: "33px",
+              top: "36px",
+              fontSize: "59px",
+              lineHeight: "70px",
               fontWeight: 600,
             }}
           >
@@ -44,12 +44,12 @@ export default function Card1() {
           <p
             className={`${inter.className} absolute text-white`}
             style={{
-              width: "460px", // scaled from 774
-              height: "150px", // scaled from 252
-              left: "34px", // scaled from 58
-              top: "409px", // scaled from 688
-              fontSize: "21px", // scaled from 35
-              lineHeight: "25px", // scaled from 42
+              width: "451px",
+              height: "147px",
+              left: "33px",
+              top: "401px",
+              fontSize: "21px",
+              lineHeight: "25px",
               fontWeight: 400,
             }}
           >
@@ -63,8 +63,8 @@ export default function Card1() {
           <div
             style={{
               position: "absolute",
-              left: "34px",
-              top: "600px", // positioned below the subheader (keeps previous placement)
+              left: "33px",
+              top: "585px",
               zIndex: 30,
               display: "flex",
               gap: "16px",
@@ -80,8 +80,8 @@ export default function Card1() {
         <div
           className="relative"
           style={{
-            width: "550px",
-            height: "700px",
+            width: "539px",
+            height: "687px",
             border: "1px solid #2F855A",
             borderRadius: "0px 10px 10px 0px",
             overflow: "hidden",

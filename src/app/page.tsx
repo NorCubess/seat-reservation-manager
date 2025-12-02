@@ -1,5 +1,7 @@
-import NavBar from "../components/NavBar";
-import Card1 from "../components/Card1";
+import NavBar from "../components/sections/NavBar";
+import Section1 from "../components/sections/Section1";
+import Section2 from "../components/sections/Section2";
+import Footer from "../components/sections/Footer";
 
 export default function Home() {
   return (
@@ -9,9 +11,12 @@ export default function Home() {
     >
       <NavBar />
       <main className="w-full">
-        <Card1 />
-        {/* Add more sections/cards below as needed */}
+        <Section1 />
+        <Section2 />
+        {/* Add more sections below as needed */}
       </main>
+
+      <Footer />  
     </div>
   );
 }
