@@ -41,11 +41,15 @@ export default function NavBar() {
 
       {/* centered buttons */}
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-3">
+        <WordButton onClick={() => scrollToSection("section1")}>
+          Home
+        </WordButton>
         <WordButton onClick={() => scrollToSection("section2")}>
           Features
         </WordButton>
-        <WordButton>Placeholder</WordButton>
-        <WordButton>Placeholder</WordButton>
+        <WordButton onClick={() => scrollToSection("section3")}>
+          Process
+        </WordButton>
         <WordButton>Placeholder</WordButton>
       </div>
 

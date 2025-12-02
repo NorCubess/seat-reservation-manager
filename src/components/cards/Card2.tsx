@@ -97,7 +97,7 @@ export default function Card2({
             fontWeight: 400,
           }}
         >
-          Explore &gt;
+          Explore
         </a>
       </div>
 

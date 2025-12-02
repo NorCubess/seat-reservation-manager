@@ -14,10 +14,8 @@ export default function Section2() {
       style={{
         backgroundColor: "#000000",
         width: "100%",
-        minHeight: "867px",
+        height: "1489px",
         position: "relative",
-        paddingTop: "98px",
-        paddingBottom: "98px",
       }}
     >
       {/* Features Section Label */}
