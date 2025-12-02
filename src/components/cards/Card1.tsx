@@ -13,25 +13,26 @@ export default function Card1() {
       <div
         className="relative flex overflow-hidden"
         style={{
-          width: "1100px",
-          height: "700px",
+          // scaled to match visual scale of Section2 while keeping aspect ratio
+          width: "1078px", // was 1100 previously (kept close to prior scale)
+          height: "687px", // new height keeping original aspect ratio
           background: "#123524",
           border: "1px solid #2F855A",
           borderRadius: "10px",
         }}
       >
         {/* Left Content Area (scaled) */}
-        <div className="relative" style={{ width: "550px", height: "700px" }}>
+        <div className="relative" style={{ width: "539px", height: "687px" }}>
           {/* Header */}
           <h1
             className={`${urbanist.className} absolute text-white`}
             style={{
-              width: "429px",
-              height: "427px",
-              left: "34px",
-              top: "37px",
-              fontSize: "60px",
-              lineHeight: "71px",
+              width: "421px", // scaled from previous values
+              height: "415px",
+              left: "33px",
+              top: "36px",
+              fontSize: "59px",
+              lineHeight: "70px",
               fontWeight: 600,
             }}
           >
@@ -43,10 +44,10 @@ export default function Card1() {
           <p
             className={`${inter.className} absolute text-white`}
             style={{
-              width: "460px",
-              height: "150px",
-              left: "34px",
-              top: "409px",
+              width: "451px",
+              height: "147px",
+              left: "33px",
+              top: "401px",
               fontSize: "21px",
               lineHeight: "25px",
               fontWeight: 400,
@@ -62,8 +63,8 @@ export default function Card1() {
           <div
             style={{
               position: "absolute",
-              left: "34px",
-              top: "600px",
+              left: "33px",
+              top: "585px",
               zIndex: 30,
               display: "flex",
               gap: "16px",
@@ -79,8 +80,8 @@ export default function Card1() {
         <div
           className="relative"
           style={{
-            width: "550px",
-            height: "700px",
+            width: "539px",
+            height: "687px",
             border: "1px solid #2F855A",
             borderRadius: "0px 10px 10px 0px",
             overflow: "hidden",

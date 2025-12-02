@@ -1,5 +1,7 @@
 import NavBar from "../components/sections/NavBar";
 import Section1 from "../components/sections/Section1";
+import Section2 from "../components/sections/Section2";
+import Footer from "../components/sections/Footer";
 
 export default function Home() {
   return (
@@ -10,8 +12,11 @@ export default function Home() {
       <NavBar />
       <main className="w-full">
         <Section1 />
+        <Section2 />
         {/* Add more sections below as needed */}
       </main>
+
+      <Footer />  
     </div>
   );
 }
