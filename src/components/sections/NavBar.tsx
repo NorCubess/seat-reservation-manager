@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Leckerli_One } from "next/font/google";
+import Link from "next/link";
 import WordButton from "../buttons/WordButton";
 import SolidButton from "../buttons/SolidButton";
 import useScrollDirection from "../../hooks/useScrollDirection";
@@ -55,7 +56,9 @@ export default function NavBar() {
 
       {/* right login button */}
       <div className="py-4 flex items-center" style={{ paddingRight: "50px" }}>
-        <SolidButton>Login</SolidButton>
+        <Link href="/login">
+          <SolidButton>Login</SolidButton>
+        </Link>
       </div>
     </nav>
   );
